@@ -17,7 +17,7 @@
     dest: /etc/vault.d/vault.hcl
 
 - name: Start Vault Service
-  ansible.builtin.systemd_Service:
+  ansible.builtin.systemd:
     name: vault
     state: restarted
     enabled: yes
