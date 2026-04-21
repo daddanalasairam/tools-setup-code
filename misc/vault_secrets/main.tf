@@ -26,7 +26,7 @@ resource "vault_generic_secret" "roboshop-dev" {
 
   data_json = <<EOT
 {
-  "foo":   "bar",
+  "catalogue_url":   "http://catalogue-dev.sairamdevops.online:8080/",
   "pizza": "cheese"
 }
 EOT
