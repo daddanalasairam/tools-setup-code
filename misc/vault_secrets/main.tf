@@ -30,7 +30,7 @@ resource "vault_generic_secret" "roboshop-dev" {
   "cart_url":   "http://cart-dev.sairamdevops.online:8080/",
   "user_url":   "http://user-dev.sairamdevops.online:8080/",
   "shipping_url":   "http://shipping-dev.sairamdevops.online:8080/",
-  "payment_url":   "http://payment-dev.sairamdevops.online:8080/",
+  "payment_url":   "http://payment-dev.sairamdevops.online:8080/"
 }
 EOT
 }
