@@ -14,12 +14,17 @@
   ansible.builtin.file:
     path: /action-runner
     state: directory
+    owner: github-runner
+    group: github-runner
+
 
 - name: Download Runner
   ansible.builtin.unarchive:
     src: https://github.com/actions/runner/releases/download/v2.317.0/actions-runner-linux-x64-2.320.0.tar.gz
     dest: /action-runner
     remote_src: yes
+    owner: github-runner
+    group: github-runner
 
 - name: Install Libicu
   ansible.builtin.dnf:
