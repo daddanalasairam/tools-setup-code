@@ -4,11 +4,13 @@ variable "tools" {
         port = 8200
         volume_size = 20
         instance_type = "t3.small"
+        policy_list = []
       }
       github-runner = {
         port = 80 # Just a dummy port
         volume_size = 20
         instance_type = "t3.small"
+        policy_list = ["ec2:*"]
     }
     }
   }
