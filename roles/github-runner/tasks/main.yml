@@ -37,4 +37,5 @@
   become_user: ec2-user
 
 - name: Register runner
-  ansible.builtin.shell: ./config.sh --unattended --url https://github.com/daddanalasairam11 --token ABCD1234TOKEN --name @(hostname) --runnergroup Default
+  ansible.builtin.shell: ./config.sh --unattended --url https://github.com/daddanalasairam11 --token {{ token.stdout }} --name {{ ansible_hostname }} --runnergroup Default
+  become_user: github-runner
