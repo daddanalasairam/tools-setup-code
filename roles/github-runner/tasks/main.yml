@@ -44,3 +44,15 @@
   args:
     chdir: /action-runner
   ignore_errors: yes
+
+- name: Copy Service file
+  ansible.builtin.copy:
+    src: github-runner.service
+    dest: /etc/systemd/system/github-runner.service
+
+- name: Start Runner service
+  ansible.builtin.service:
+    name: github-runner
+    daemon-reload: yes
+    enabled: yes
+    state: restarted
