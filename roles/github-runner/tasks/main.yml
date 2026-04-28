@@ -34,3 +34,7 @@
 - name: Get token
   ansible.builtin.shell: gh api --method POST -H "Accept: application/vnd.github+json" -H "X-GitHub-Api-Version: 2022-11-28" /orgs/daddanalasairam11/actions/runner/registration-token
   register: token
+  become_user: ec2-user
+
+- name: Register runner
+  ansible.builtin.shell: ./config.sh --unattended --url https://github.com/daddanalasairam11 --token ABCD1234TOKEN --name @(hostname) --runnergroup Default
