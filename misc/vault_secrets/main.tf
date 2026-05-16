@@ -31,6 +31,16 @@ resource "vault_generic_secret" "frontend" {
   "user_url":   "http://user-dev.sairamdevops.online:8080/",
   "shipping_url":   "http://shipping-dev.sairamdevops.online:8080/",
   "payment_url":   "http://payment-dev.sairamdevops.online:8080/"
+  "CATALOGUE_HOST": "catalogue-dev.sairamdevops.online"
+  "CATALOGUE_PORT": 8080
+  "USER_HOST": "user-dev.sairamdevops.online"
+  "USER_PORT": 8080
+  "CART_HOST": "cart-dev.sairamdevops.online"
+  "CART_PORT": 8080
+  "SHIPPING_HOST": "shipping-dev.sairamdevops.online"
+  "SHIPPING_PORT": 8080
+  "PAYMENT_HOST": "payment-dev.sairamdevops.online"
+  "PAYMENT_PORT" : 8080
 }
 EOT
 }
